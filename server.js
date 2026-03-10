@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 // Middlewares
 app.use(cors({ origin: [
     'http://localhost:4200',           // développement
-    'https://ton-app.vercel.app'       // production (on mettra la vraie URL après)
+    'https://task-manager-api-4ufw.onrender.com/api'       // production (on mettra la vraie URL après)
   ] }));
 app.use(express.json());
 
