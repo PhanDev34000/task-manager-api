@@ -11,10 +11,14 @@ const app  = express();
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
-app.use(cors({ origin: [
-    'http://localhost:4200',           // développement
-    'https://task-manager-api-4ufw.onrender.com/api'       // production (on mettra la vraie URL après)
-  ] }));
+app.use(cors({  origin: [
+    'http://localhost:4200',
+    'https://task-manager-app-ten-jet.vercel.app'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes publiques
